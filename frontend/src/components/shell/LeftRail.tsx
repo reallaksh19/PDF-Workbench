@@ -5,6 +5,8 @@ import {
   MessageSquare,
   Search,
   Sparkles,
+  List,
+  FileText,
 } from 'lucide-react';
 import { Tooltip } from '@/components/ui/Tooltip';
 import { useEditorStore } from '@/core/editor/store';
@@ -23,6 +25,8 @@ export const LeftRail: React.FC = () => {
     { id: 'comments', icon: MessageSquare, label: 'Comments' },
     { id: 'search', icon: Search, label: 'Search' },
     { id: 'macros', icon: Sparkles, label: 'Macros' },
+    { id: 'outline', icon: List, label: 'Outline' },
+    { id: 'forms', icon: FileText, label: 'Forms' },
   ];
 
   return (

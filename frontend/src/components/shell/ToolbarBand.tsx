@@ -13,6 +13,10 @@ const RIBBON_TABS: Array<{ id: RibbonTab; label: string }> = [
   { id: 'annotate', label: 'Annotate' },
   { id: 'macro', label: 'Macro' },
   { id: 'view', label: 'View' },
+  { id: 'author', label: 'Author' },
+  { id: 'insert', label: 'Insert' },
+  { id: 'layout', label: 'Layout' },
+  { id: 'format', label: 'Format' },
 ];
 
 export const ToolbarBand: React.FC = () => {
@@ -68,6 +72,30 @@ export const ToolbarBand: React.FC = () => {
         {activeRibbonTab === 'view' && (
           <RibbonGroup title="Viewer">
             <ToolbarView />
+          </RibbonGroup>
+        )}
+
+        {activeRibbonTab === 'author' && (
+          <RibbonGroup title="Authoring">
+            <div className="h-10 px-4 flex items-center text-sm text-slate-500">Authoring tools coming soon</div>
+          </RibbonGroup>
+        )}
+
+        {activeRibbonTab === 'insert' && (
+          <RibbonGroup title="Insert">
+            <div className="h-10 px-4 flex items-center text-sm text-slate-500">Insert tools coming soon</div>
+          </RibbonGroup>
+        )}
+
+        {activeRibbonTab === 'layout' && (
+          <RibbonGroup title="Layout">
+            <div className="h-10 px-4 flex items-center text-sm text-slate-500">Layout tools coming soon</div>
+          </RibbonGroup>
+        )}
+
+        {activeRibbonTab === 'format' && (
+          <RibbonGroup title="Format">
+            <div className="h-10 px-4 flex items-center text-sm text-slate-500">Formatting tools coming soon</div>
           </RibbonGroup>
         )}
       </div>
