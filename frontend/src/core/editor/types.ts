@@ -24,10 +24,12 @@ export type SidebarTab =
   | 'bookmarks'
   | 'comments'
   | 'search'
-  | 'macros';
+  | 'macros'
+  | 'outline'
+  | 'forms';
 
-export type InspectorTab = 'properties' | 'style' | 'metadata' | 'review';
-export type RibbonTab = 'file' | 'organize' | 'annotate' | 'macro' | 'view';
+export type InspectorTab = 'properties' | 'style' | 'metadata' | 'review' | 'layout' | 'data';
+export type RibbonTab = 'file' | 'organize' | 'annotate' | 'macro' | 'view' | 'author' | 'insert' | 'layout' | 'format';
 
 export interface EditorState {
   activeTool: ActiveTool;

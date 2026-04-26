@@ -2,7 +2,7 @@
 import { useEditorStore } from '@/core/editor/store';
 import { useAnnotationStore } from '@/core/annotations/store';
 import type { AnnotationType, PdfAnnotation } from '@/core/annotations/types';
-import { Settings, Palette, Info, ChevronRight, ChevronLeft, ChevronDown, MessageSquare, Send, Minus, X } from 'lucide-react';
+import { Settings, Palette, Info, ChevronRight, ChevronLeft, ChevronDown, MessageSquare, Send, Minus, X, LayoutTemplate, Database } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import type { ReviewReply, ReviewStatus } from '@/core/review/types';
 import { Button } from '@/components/ui/Button';
@@ -81,6 +81,8 @@ export const InspectorPanel: React.FC = () => {
     { id: 'style', icon: Palette, label: 'Style' },
     { id: 'metadata', icon: Info, label: 'Metadata' },
     { id: 'review', icon: MessageSquare, label: 'Review' },
+    { id: 'layout', icon: LayoutTemplate, label: 'Layout' },
+    { id: 'data', icon: Database, label: 'Data' },
   ] as const;
 
   return (
@@ -169,6 +171,14 @@ export const InspectorPanel: React.FC = () => {
             updateAnnotation={updateAnnotation}
             updateManyAnnotations={updateManyAnnotations}
           />
+        )}
+
+        {inspectorTab === 'layout' && (
+          <div className="p-4 text-sm text-slate-500">Layout inspector goes here</div>
+        )}
+
+        {inspectorTab === 'data' && (
+          <div className="p-4 text-sm text-slate-500">Data inspector goes here</div>
         )}
       </div>
     </div>

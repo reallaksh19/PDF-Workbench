@@ -44,6 +44,10 @@ export const SidebarPanel: React.FC = () => {
         return 'Search';
       case 'macros':
         return 'Macros';
+      case 'outline':
+        return 'Outline';
+      case 'forms':
+        return 'Forms';
       default:
         return 'Panel';
     }
@@ -90,6 +94,8 @@ export const SidebarPanel: React.FC = () => {
           {sidebarTab === 'search' && <SearchPanel />}
         </Suspense>
         {sidebarTab === 'macros' && <MacrosSidebar />}
+        {sidebarTab === 'outline' && <div className="p-4 text-sm text-slate-500">Outline goes here</div>}
+        {sidebarTab === 'forms' && <div className="p-4 text-sm text-slate-500">Forms go here</div>}
       </div>
     </div>
   );
